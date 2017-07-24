@@ -18,11 +18,11 @@ var FlightSearchResolver = (function () {
     FlightSearchResolver.prototype.resolve = function (route) {
         return this.flightSearchService.search(route.queryParams);
     };
+    FlightSearchResolver = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [flight_search_service_1.FlightSearchService])
+    ], FlightSearchResolver);
     return FlightSearchResolver;
 }());
-FlightSearchResolver = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [flight_search_service_1.FlightSearchService])
-], FlightSearchResolver);
 exports.FlightSearchResolver = FlightSearchResolver;
 //# sourceMappingURL=flight-search-resolver.service.js.map

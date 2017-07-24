@@ -20,13 +20,13 @@ var HomeComponent = (function () {
             queryParams: filter
         });
     };
+    HomeComponent = __decorate([
+        core_1.Component({
+            templateUrl: './home.component.html'
+        }),
+        __metadata("design:paramtypes", [router_1.Router])
+    ], HomeComponent);
     return HomeComponent;
 }());
-HomeComponent = __decorate([
-    core_1.Component({
-        templateUrl: './home.component.html'
-    }),
-    __metadata("design:paramtypes", [router_1.Router])
-], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map

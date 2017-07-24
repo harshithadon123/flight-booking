@@ -36,31 +36,31 @@ var ItineraryListComponent = (function () {
             SortDirection: event.value
         });
     };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Array)
+    ], ItineraryListComponent.prototype, "itineraryListResult", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], ItineraryListComponent.prototype, "pageChange", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], ItineraryListComponent.prototype, "sortChange", void 0);
+    __decorate([
+        core_1.ViewChild('itineraryListPager'),
+        __metadata("design:type", material_1.MdPaginator)
+    ], ItineraryListComponent.prototype, "itineraryListPager", void 0);
+    ItineraryListComponent = __decorate([
+        core_1.Component({
+            selector: 'itinerary-list',
+            templateUrl: './itinerary-list.component.html',
+            styleUrls: ['./itinerary-list.component.css']
+        }),
+        __metadata("design:paramtypes", [config_service_1.ConfigService])
+    ], ItineraryListComponent);
     return ItineraryListComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Array)
-], ItineraryListComponent.prototype, "itineraryListResult", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], ItineraryListComponent.prototype, "pageChange", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], ItineraryListComponent.prototype, "sortChange", void 0);
-__decorate([
-    core_1.ViewChild('itineraryListPager'),
-    __metadata("design:type", material_1.MdPaginator)
-], ItineraryListComponent.prototype, "itineraryListPager", void 0);
-ItineraryListComponent = __decorate([
-    core_1.Component({
-        selector: 'itinerary-list',
-        templateUrl: './itinerary-list.component.html',
-        styleUrls: ['./itinerary-list.component.css']
-    }),
-    __metadata("design:paramtypes", [config_service_1.ConfigService])
-], ItineraryListComponent);
 exports.ItineraryListComponent = ItineraryListComponent;
 //# sourceMappingURL=itinerary-list.component.js.map

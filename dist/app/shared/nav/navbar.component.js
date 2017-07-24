@@ -11,14 +11,14 @@ var NavBarComponent = (function () {
     function NavBarComponent() {
         this.isNavCollapsed = true;
     }
+    NavBarComponent = __decorate([
+        core_1.Component({
+            selector: 'nav-bar',
+            templateUrl: './navbar.component.html',
+            styleUrls: ['./navbar.component.css']
+        })
+    ], NavBarComponent);
     return NavBarComponent;
 }());
-NavBarComponent = __decorate([
-    core_1.Component({
-        selector: 'nav-bar',
-        templateUrl: './navbar.component.html',
-        styleUrls: ['./navbar.component.css']
-    })
-], NavBarComponent);
 exports.NavBarComponent = NavBarComponent;
 //# sourceMappingURL=navbar.component.js.map

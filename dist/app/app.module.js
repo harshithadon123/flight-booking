@@ -24,33 +24,33 @@ var shared_module_1 = require("./shared/shared.module");
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                animations_1.BrowserAnimationsModule,
+                material_module_1.MaterialModule,
+                flex_layout_1.FlexLayoutModule,
+                http_1.HttpModule,
+                forms_1.ReactiveFormsModule,
+                shared_module_1.SharedModule,
+                router_1.RouterModule.forRoot(app_routes_1.appRoutes)
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                navbar_component_1.NavBarComponent,
+                home_component_1.HomeComponent
+            ],
+            providers: [
+                config_service_1.ConfigService,
+                { provide: moment_service_1.MOMENT_TOKEN, useValue: moment }
+            ],
+            bootstrap: [
+                app_component_1.AppComponent
+            ]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            animations_1.BrowserAnimationsModule,
-            material_module_1.MaterialModule,
-            flex_layout_1.FlexLayoutModule,
-            http_1.HttpModule,
-            forms_1.ReactiveFormsModule,
-            shared_module_1.SharedModule,
-            router_1.RouterModule.forRoot(app_routes_1.appRoutes)
-        ],
-        declarations: [
-            app_component_1.AppComponent,
-            navbar_component_1.NavBarComponent,
-            home_component_1.HomeComponent
-        ],
-        providers: [
-            config_service_1.ConfigService,
-            { provide: moment_service_1.MOMENT_TOKEN, useValue: moment }
-        ],
-        bootstrap: [
-            app_component_1.AppComponent
-        ]
-    })
-], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

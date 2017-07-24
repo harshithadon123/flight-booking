@@ -23,29 +23,29 @@ var shared_module_1 = require("../shared/shared.module");
 var SearchModule = (function () {
     function SearchModule() {
     }
+    SearchModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule,
+                forms_1.FormsModule,
+                flex_layout_1.FlexLayoutModule,
+                material_module_1.MaterialModule,
+                shared_module_1.SharedModule,
+                router_1.RouterModule.forChild(search_routs_1.searchRoutes)
+            ],
+            declarations: [
+                search_results_component_1.SearchResultsComponent,
+                search_summary_component_1.SearchSummaryComponent,
+                itinerary_list_component_1.ItineraryListComponent,
+                itinerary_component_1.ItineraryComponent
+            ],
+            providers: [
+                flight_search_service_1.FlightSearchService,
+                flight_search_resolver_service_1.FlightSearchResolver
+            ]
+        })
+    ], SearchModule);
     return SearchModule;
 }());
-SearchModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            forms_1.FormsModule,
-            flex_layout_1.FlexLayoutModule,
-            material_module_1.MaterialModule,
-            shared_module_1.SharedModule,
-            router_1.RouterModule.forChild(search_routs_1.searchRoutes)
-        ],
-        declarations: [
-            search_results_component_1.SearchResultsComponent,
-            search_summary_component_1.SearchSummaryComponent,
-            itinerary_list_component_1.ItineraryListComponent,
-            itinerary_component_1.ItineraryComponent
-        ],
-        providers: [
-            flight_search_service_1.FlightSearchService,
-            flight_search_resolver_service_1.FlightSearchResolver
-        ]
-    })
-], SearchModule);
 exports.SearchModule = SearchModule;
 //# sourceMappingURL=search.module.js.map

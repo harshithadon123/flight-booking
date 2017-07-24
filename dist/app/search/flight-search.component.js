@@ -43,32 +43,32 @@ var FlightSearchComponent = (function () {
             this.searchClick.emit(formValues);
         }
     };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], FlightSearchComponent.prototype, "searchFilter", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], FlightSearchComponent.prototype, "showClose", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], FlightSearchComponent.prototype, "closeClick", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], FlightSearchComponent.prototype, "searchClick", void 0);
+    FlightSearchComponent = __decorate([
+        core_1.Component({
+            selector: 'flight-search',
+            templateUrl: './flight-search.component.html',
+            styleUrls: ['./flight-search.component.css']
+        }),
+        __param(0, core_1.Inject(moment_service_1.MOMENT_TOKEN)),
+        __metadata("design:paramtypes", [Object])
+    ], FlightSearchComponent);
     return FlightSearchComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], FlightSearchComponent.prototype, "searchFilter", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], FlightSearchComponent.prototype, "showClose", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], FlightSearchComponent.prototype, "closeClick", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], FlightSearchComponent.prototype, "searchClick", void 0);
-FlightSearchComponent = __decorate([
-    core_1.Component({
-        selector: 'flight-search',
-        templateUrl: './flight-search.component.html',
-        styleUrls: ['./flight-search.component.css']
-    }),
-    __param(0, core_1.Inject(moment_service_1.MOMENT_TOKEN)),
-    __metadata("design:paramtypes", [Object])
-], FlightSearchComponent);
 exports.FlightSearchComponent = FlightSearchComponent;
 //# sourceMappingURL=flight-search.component.js.map

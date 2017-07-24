@@ -11,13 +11,13 @@ var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Angular';
     }
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'flight-booking-app',
+            template: "\n    <div class=\"mat-typography\">\n      <nav-bar></nav-bar>\n      <router-outlet></router-outlet>\n    </div>\n  ",
+        })
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'flight-booking-app',
-        template: "\n    <div class=\"mat-typography\">\n      <nav-bar></nav-bar>\n      <router-outlet></router-outlet>\n    </div>\n  ",
-    })
-], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

@@ -36,11 +36,11 @@ var FlightSearchService = (function () {
     FlightSearchService.prototype.handleError = function (error) {
         return Rx_1.Observable.throw(error.statusText);
     };
+    FlightSearchService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http, config_service_1.ConfigService])
+    ], FlightSearchService);
     return FlightSearchService;
 }());
-FlightSearchService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http, config_service_1.ConfigService])
-], FlightSearchService);
 exports.FlightSearchService = FlightSearchService;
 //# sourceMappingURL=flight-search.service.js.map

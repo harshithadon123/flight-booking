@@ -13,10 +13,10 @@ var ConfigService = (function () {
         this.DefaultPageSize = 10;
         this.PageSizeOptions = [10, 25, 50];
     }
+    ConfigService = __decorate([
+        core_1.Injectable()
+    ], ConfigService);
     return ConfigService;
 }());
-ConfigService = __decorate([
-    core_1.Injectable()
-], ConfigService);
 exports.ConfigService = ConfigService;
 //# sourceMappingURL=config.service.js.map

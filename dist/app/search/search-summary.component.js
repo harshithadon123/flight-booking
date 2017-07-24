@@ -17,22 +17,22 @@ var SearchSummaryComponent = (function () {
     SearchSummaryComponent.prototype.handleEdit = function () {
         this.editClick.emit();
     };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], SearchSummaryComponent.prototype, "searchFilter", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], SearchSummaryComponent.prototype, "editClick", void 0);
+    SearchSummaryComponent = __decorate([
+        core_1.Component({
+            selector: 'search-summary',
+            templateUrl: './search-summary.component.html',
+            styleUrls: ['./search-summary.component.css']
+        })
+    ], SearchSummaryComponent);
     return SearchSummaryComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], SearchSummaryComponent.prototype, "searchFilter", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], SearchSummaryComponent.prototype, "editClick", void 0);
-SearchSummaryComponent = __decorate([
-    core_1.Component({
-        selector: 'search-summary',
-        templateUrl: './search-summary.component.html',
-        styleUrls: ['./search-summary.component.css']
-    })
-], SearchSummaryComponent);
 exports.SearchSummaryComponent = SearchSummaryComponent;
 //# sourceMappingURL=search-summary.component.js.map

@@ -72,15 +72,15 @@ var SearchResultsComponent = (function () {
     SearchResultsComponent.prototype.ngOnDestroy = function () {
         this.paramsSubscription.unsubscribe();
     };
+    SearchResultsComponent = __decorate([
+        core_1.Component({
+            templateUrl: './search-results.component.html',
+            styleUrls: ['./search-results.component.css']
+        }),
+        __metadata("design:paramtypes", [router_1.Router, router_1.ActivatedRoute,
+            flight_search_service_1.FlightSearchService, config_service_1.ConfigService])
+    ], SearchResultsComponent);
     return SearchResultsComponent;
 }());
-SearchResultsComponent = __decorate([
-    core_1.Component({
-        templateUrl: './search-results.component.html',
-        styleUrls: ['./search-results.component.css']
-    }),
-    __metadata("design:paramtypes", [router_1.Router, router_1.ActivatedRoute,
-        flight_search_service_1.FlightSearchService, config_service_1.ConfigService])
-], SearchResultsComponent);
 exports.SearchResultsComponent = SearchResultsComponent;
 //# sourceMappingURL=search-results.component.js.map

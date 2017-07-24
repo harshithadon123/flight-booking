@@ -13,18 +13,18 @@ var core_1 = require("@angular/core");
 var ItineraryComponent = (function () {
     function ItineraryComponent() {
     }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], ItineraryComponent.prototype, "data", void 0);
+    ItineraryComponent = __decorate([
+        core_1.Component({
+            selector: 'itinerary',
+            templateUrl: './itinerary.component.html',
+            styleUrls: ['./itinerary.component.css']
+        })
+    ], ItineraryComponent);
     return ItineraryComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], ItineraryComponent.prototype, "data", void 0);
-ItineraryComponent = __decorate([
-    core_1.Component({
-        selector: 'itinerary',
-        templateUrl: './itinerary.component.html',
-        styleUrls: ['./itinerary.component.css']
-    })
-], ItineraryComponent);
 exports.ItineraryComponent = ItineraryComponent;
 //# sourceMappingURL=itinerary.component.js.map
