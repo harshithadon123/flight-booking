@@ -1,0 +1,11 @@
+<div>
+    <search-summary [searchFilter]="searchFilter" *ngIf="!editMode" (editClick)="handleEditClick()"></search-summary>
+    <md-card *ngIf="editMode" class="edit-search">
+        <md-card-content>
+            <flight-search [searchFilter]="searchFilter" [showClose]="true" 
+                (searchClick)="handleSearchClick($event)" (closeClick)="handleCloseClick()"></flight-search>
+        </md-card-content>
+    </md-card>
+    <itinerary-list [itineraryListResult]="searchResult"
+        (pageChange)="handlePageChange($event)" (sortChange)="handleSortChange($event)"></itinerary-list>
+</div>
