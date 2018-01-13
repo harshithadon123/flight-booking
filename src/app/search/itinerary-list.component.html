@@ -1,28 +1,28 @@
 <div class="itinerary-list">
-    <!--<md-spinner></md-spinner>-->
+    <!--<mat-spinner></mat-spinner>-->
     <div fxLayout.xs="column" fxLayout.gt-xs="row" class="pagination-bar">
         <div fxFlex.gt-xs="45%" class="sort-controls-container">
-            <md-select placeholder="Sort by" class="sort-control" (change)="handleSortByChange($event)"
+            <mat-select placeholder="Sort by" class="sort-control" (change)="handleSortByChange($event)"
                 [(ngModel)]="sortBy">
-                <md-option [value]="'TotalAmount'">Price</md-option>
-                <md-option [value]="'AirlineName'">Airline</md-option>
-            </md-select>
-            <md-select placeholder="Sort order" class="sort-control" (change)="handleSortDirectionChange($event)"
+                <mat-option [value]="'TotalAmount'">Price</mat-option>
+                <mat-option [value]="'AirlineName'">Airline</mat-option>
+            </mat-select>
+            <mat-select placeholder="Sort order" class="sort-control" (change)="handleSortDirectionChange($event)"
                 [(ngModel)]="sortOrder">
-                <md-option [value]="'1'">Ascending</md-option>
-                <md-option [value]="'-1'">Descending</md-option>
-            </md-select>
+                <mat-option [value]="'1'">Ascending</mat-option>
+                <mat-option [value]="'-1'">Descending</mat-option>
+            </mat-select>
         </div>
         <div fxFlex.gt-xs="55%" fxLayoutAlign.xs="start" fxLayoutAlign.gt-xs="end" fxFlex.xs="1">
-            <md-paginator #itineraryListPager 
+            <mat-paginator #itineraryListPager 
                 [length]="itineraryListResult?.TotalCount"
                 [pageSize]="pageSize"
                 [pageSizeOptions]="pageSizeOptions"
                 (page)="handlePage($event)">
-            </md-paginator>
+            </mat-paginator>
         </div>
     </div>
     <div *ngFor="let itinerary of itineraryListResult?.ItineraryPage">
-        <itinerary [data]="itinerary"></itinerary>
+        <app-itinerary [data]="itinerary"></app-itinerary>
     </div>
 </div>

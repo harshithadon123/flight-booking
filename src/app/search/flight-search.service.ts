@@ -1,35 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
-import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { ISearchFilter } from './search-filter.model';
 import { ISearchResult } from './search-result.model';
 import { ConfigService } from '../shared/services/config.service';
-//import { IItinerary } from './itinerary.model';
 
 @Injectable()
 export class FlightSearchService {
 
-    constructor(private http: Http, private configService: ConfigService) {
+    constructor(private http: HttpClient, private configService: ConfigService) {
     }
 
     search(filter: ISearchFilter): Observable<ISearchResult> {
-        return this.http.get(this.configService.ApiBaseUrl + '/flights', {
-            params: filter
-        }).map((response: Response) => {
-            return <ISearchResult>response.json();
-        }).catch(this.handleError);
-    }
+        const params = new HttpParams();
+        params.append('departureAirportCode', filter.departureAirportCode);
+        params.append('returnAirportCode', filter.returnAirportCode);
+        params.append('departureDate', filter.departureDate.toDateString());
+        params.append('returnDate', filter.returnDate.toDateString());
+        params.append('pageIndex', filter.pageIndex.toString());
+        params.append('pageSize', filter.pageSize.toString());
+        params.append('sortBy', filter.sortBy);
+        params.append('sortOrder', filter.sortOrder.toString());
 
-    // search(filter: ISearchFilter): Observable<IItinerary[]> {
-    //     return this.http.get(this.configService.ApiBaseUrl + '/flight', {
-    //         params: filter
-    //     }).map((response: Response) => {
-    //         return <IItinerary[]>response.json();
-    //     }).catch(this.handleError);
-    // }
-
-    private handleError(error: Response) {
-        return Observable.throw(error.statusText);
+        return this.http.get<ISearchResult>(this.configService.ApiBaseUrl + '/flights', {
+            params: params
+        });
     }
 }

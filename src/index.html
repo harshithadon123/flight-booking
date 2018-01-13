@@ -1,33 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Angular QuickStart</title>
-    <base href="/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flight Booking</title>
+  <base href="/">
 
-    <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+  <!-- Material design -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-
-    <script src="systemjs.config.js"></script>
-
-    <!-- 3rd party -->
-    <script src="node_modules/moment/min/moment.min.js"></script>
-
-    <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
-    </script>
-  </head>
-
-  <body class="mat-typography">
-    <flight-booking-app>Loading ...</flight-booking-app>
-  </body>
+</head>
+<body class="mat-typography">
+  <app-flight-booking>Loading ...</app-flight-booking>
+</body>
 </html>

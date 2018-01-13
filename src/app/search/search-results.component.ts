@@ -7,12 +7,14 @@ import { ISearchFilter } from './search-filter.model';
 import { FlightSearchService } from './flight-search.service';
 import { ISearchResult } from './search-result.model';
 import { SortEvent } from '../shared/models/SortEvent';
+import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
     templateUrl: './search-results.component.html',
     styleUrls: ['./search-results.component.css']
 })
-export class SearchResultsComponent implements OnInit {
+export class SearchResultsComponent implements OnInit, OnDestroy {
     searchFilter: ISearchFilter;
     searchResult: ISearchResult;
     editMode: boolean;
@@ -39,6 +41,16 @@ export class SearchResultsComponent implements OnInit {
             // Search for flights
             this.flightSearchService.search(this.searchFilter).subscribe(result => {
                 this.searchResult = result;
+            },
+            (error: HttpErrorResponse) => {
+                if (error.error instanceof Error) {
+                    // A client-side or network error occurred. Handle it accordingly.
+                    console.log('An error occurred:', error.error.message);
+                  } else {
+                    // The backend returned an unsuccessful response code.
+                    // The response body may contain clues as to what went wrong,
+                    console.log(`Backend returned code ${error.status}, body was: ${error.error}`);
+                  }
             });
         });
     }

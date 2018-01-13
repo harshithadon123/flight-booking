@@ -11,7 +11,6 @@ import { SearchSummaryComponent } from './search-summary.component';
 import { ItineraryListComponent } from './itinerary-list.component';
 import { ItineraryComponent } from './itinerary.component';
 import { FlightSearchService } from './flight-search.service';
-import { FlightSearchResolver } from './flight-search-resolver.service';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -30,8 +29,7 @@ import { SharedModule } from '../shared/shared.module';
         ItineraryComponent
     ],
     providers: [
-        FlightSearchService,
-        FlightSearchResolver
+        FlightSearchService
     ]
 })
 export class SearchModule { }

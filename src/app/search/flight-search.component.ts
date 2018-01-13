@@ -5,25 +5,25 @@ import { MOMENT_TOKEN } from '../shared/services/moment.service';
 import { ISearchFilter } from './search-filter.model';
 
 @Component({
-    selector: 'flight-search',
+    selector: 'app-flight-search',
     templateUrl: './flight-search.component.html',
     styleUrls: ['./flight-search.component.css']
 })
 export class FlightSearchComponent implements OnInit {
     @Input() searchFilter?: ISearchFilter;
-    @Input() showClose: boolean = false;
+    @Input() showClose = false;
     @Output() closeClick = new EventEmitter();
     @Output() searchClick = new EventEmitter();
 
-    private searchForm: FormGroup;
-    private departureAirportCode: FormControl;
-    private returnAirportCode: FormControl;
-    private departureDate: FormControl;
-    private returnDate: FormControl;
+    searchForm: FormGroup;
+    departureAirportCode: FormControl;
+    returnAirportCode: FormControl;
+    departureDate: FormControl;
+    returnDate: FormControl;
 
-    private defaultMinDate: Date;
+    defaultMinDate: Date;
 
-    constructor(@Inject(MOMENT_TOKEN) private moment: any){
+    constructor(@Inject(MOMENT_TOKEN) private moment: any) {
     }
 
     ngOnInit() {

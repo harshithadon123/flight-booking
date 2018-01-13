@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ISearchFilter } from './search-filter.model';
 
 @Component({
-    selector: 'search-summary',
+    selector: 'app-search-summary',
     templateUrl: './search-summary.component.html',
     styleUrls: ['./search-summary.component.css']
 })

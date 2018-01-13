@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'flight-booking-app',
+  selector: 'app-flight-booking',
   template: `
     <div class="mat-typography">
-      <nav-bar></nav-bar>
+      <app-nav-bar></app-nav-bar>
       <router-outlet></router-outlet>
     </div>
   `,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {
+  name = 'Angular';
+}
