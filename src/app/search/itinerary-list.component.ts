@@ -11,7 +11,7 @@ import { ConfigService } from '../shared/services/config.service';
     styleUrls: ['./itinerary-list.component.css']
 })
 export class ItineraryListComponent {
-    @Input() itineraryListResult: ISearchResult[];
+    @Input() itineraryListResult: ISearchResult;
     @Output() pageChange = new EventEmitter<PageEvent>();
     @Output() sortChange = new EventEmitter<SortEvent>();
 
