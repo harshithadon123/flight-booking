@@ -13,15 +13,15 @@ export class FlightSearchService {
     }
 
     search(filter: ISearchFilter): Observable<ISearchResult> {
-        const params = new HttpParams();
-        params.append('departureAirportCode', filter.departureAirportCode);
-        params.append('returnAirportCode', filter.returnAirportCode);
-        params.append('departureDate', filter.departureDate.toDateString());
-        params.append('returnDate', filter.returnDate.toDateString());
-        params.append('pageIndex', filter.pageIndex.toString());
-        params.append('pageSize', filter.pageSize.toString());
-        params.append('sortBy', filter.sortBy);
-        params.append('sortOrder', filter.sortOrder.toString());
+        const params = new HttpParams()
+            .append('departureAirportCode', filter.departureAirportCode)
+            .append('returnAirportCode', filter.returnAirportCode)
+            .append('departureDate', filter.departureDate.toDateString())
+            .append('returnDate', filter.returnDate.toDateString())
+            .append('pageIndex', filter.pageIndex.toString())
+            .append('pageSize', filter.pageSize.toString())
+            .append('sortBy', filter.sortBy)
+            .append('sortOrder', filter.sortOrder.toString());
 
         return this.http.get<ISearchResult>(this.configService.ApiBaseUrl + '/flights', {
             params: params
